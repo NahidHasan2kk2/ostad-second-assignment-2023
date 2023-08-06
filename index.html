@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ostad second assignment 2023</title>
+</head>
+
+<body>
+    <!-- problem 1 DOM Manipulation html file -->
+    <div id="contentDiv">Initial content</div>
+    <button onclick="addNewMessage()" id="changeButton">Click me!</button><br><br><br>
+
+
+    <!-- problem 2  Click Counter  html file -->
+    <p>Count: <span id="count">0</span></p>
+    <button onclick="incrementItem()" id="incrementButton">Increment</button>
+
+    <script>
+
+        ////////////// problem 1 => DOM Manipulation
+        function addNewMessage() {
+            var newMessage = 'Hello world!!'
+            document.getElementById('contentDiv').innerHTML = newMessage;
+
+            document.write(result);
+
+        }
+        /////////// problem 2 =>  Click Counter
+
+        let count = 0;
+        function incrementItem() {
+            count++;
+
+            document.getElementById('count').innerHTML = count;
+
+
+        }
+
+        /////////// problem 4 =>  Ajex
+        var url = ' https://jsonplaceholder.typicode.com/posts';
+        fetch(url)
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            })
+
+    </script>
+
+</body>
+
+</html>
